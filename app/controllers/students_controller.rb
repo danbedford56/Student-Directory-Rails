@@ -48,7 +48,7 @@ class StudentsController < ApplicationController
       redirect_to(students_path, alert: "Empty field!") and return
     else
       @parameter = params[:search].downcase
-      @results = Student.all.where("lower(name) LIKE :search OR lower(cohort) LIKE :search", search: @parameter)
+      @results = Student.all.where("lower(name) LIKE :search OR lower(cohort) LIKE :search", search: @parameter + "%")
     end
   end
 

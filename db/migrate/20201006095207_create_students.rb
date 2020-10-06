@@ -3,7 +3,7 @@ class CreateStudents < ActiveRecord::Migration[6.0]
     create_table :students do |t|
 
       t.string :name
-      t.text :cohort
+      t.string :cohort
 
       t.timestamps
     end
