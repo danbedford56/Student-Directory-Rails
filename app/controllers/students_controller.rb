@@ -43,6 +43,15 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
+  def search
+    if params[:search].blank?
+      redirect_to(students_path, alert: "Empty field!") and return
+    else
+      @parameter = params[:search].downcase
+      @results = Student.all.where("lower(name) LIKE :search OR lower(cohort) LIKE :search", search: @parameter)
+    end
+  end
+
   private
     def student_params
       params.require(:student).permit(:name, :cohort)
