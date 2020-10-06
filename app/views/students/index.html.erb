@@ -1,0 +1,22 @@
+<h1>Student Directory</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th>Cohort</th>
+    <th></th>
+  </tr>
+
+  <% @students.each do |student| %>
+    <tr>
+      <td><%= student.name %></td>
+      <td></td>
+      <td></td>
+      <td><%= student.cohort %></td>
+      <td></td>
+      <td><%= link_to 'Show', student_path(student) %></td>
+    </tr>
+  <% end %>
+</table>

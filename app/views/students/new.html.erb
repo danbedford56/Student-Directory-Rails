@@ -1,0 +1,17 @@
+<h1>New Student<h1>
+<%= form_with scope: :student, url: students_path, local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :cohort %><br>
+    <%= form.text_field :cohort %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', students_path %>
