@@ -1,18 +1,16 @@
 <h1>Student Directory</h1>
 
 <table>
-  <tr>
+  <tr style="border-spacing: 10px;">
     <th>Name</th>
-    <th></th>
     <th></th>
     <th>Cohort</th>
     <th></th>
   </tr>
 
   <% @students.each do |student| %>
-    <tr>
+    <tr style="border-spacing: 10px;">
       <td><%= student.name %></td>
-      <td></td>
       <td></td>
       <td><%= student.cohort %></td>
       <td></td>

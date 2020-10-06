@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   get 'welcome/index'
   get 'new' => 'students#new'
-
   resources :students
 
   root 'welcome#index', as: 'home'

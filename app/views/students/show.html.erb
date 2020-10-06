@@ -8,4 +8,10 @@
   <%= @student.cohort %>
 </p>
 
+<%= link_to 'Edit', edit_student_path(@student) %>
+<br>
+<td><%= link_to 'Delete', student_path(@student),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></td>
+<br>
 <%= link_to 'Back', students_path %>
